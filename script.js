@@ -16,12 +16,6 @@ const text1 = document.createElement("a")
 text1.textContent = "Name"
 div.appendChild(text1)
 
-text1.style.cssText=`
-margin: 20px 25px 0;
-display:inline-block;
-font-weight: bolder;
-font-size: 10px;
-`
 const input = document.createElement("input")
 div.appendChild(input)
 input.setAttribute("placeholder", "First Name")
@@ -161,18 +155,12 @@ form.appendChild(agree)
 agree.setAttribute("style", "margin: 5px 25px;")
 const box = document.createElement("input")
 box.setAttribute("type", "checkbox")
+box.style.accentColor="orangered"
 agree.appendChild(box)
 const check = document.createElement("a")
 check.textContent="I agree every terms and conditions."
 agree.appendChild(check)
 
-agree.style.cssText=`
-color:gray;
-font-size: 12px;
-margin: 5px 25px;
-display:flex;
-align-items:center;
-`
 
 
 const btn = document.createElement("button")
@@ -180,7 +168,7 @@ btn.textContent="SUBMIT"
 form.appendChild(btn)
 
 btn.addEventListener("click", function() {
-    alert("submitted ")
+    alert("Thank you for your cooperation ")
 });
 btn.addEventListener("mouseenter", function(){
 btn.style.backgroundColor = "orangered"
@@ -191,6 +179,21 @@ btn.addEventListener("mouseout", function(){
     btn.style.color = "black"
 });
 
+// css-styling
+
+text1.style.cssText=`
+margin: 20px 25px 0;
+display:inline-block;
+font-weight: bolder;
+font-size: 10px;
+`
+agree.style.cssText=`
+color:gray;
+font-size: 12px;
+margin: 5px 25px;
+display:flex;
+align-items:center;
+`
 btn.style.cssText=`
 display:flex;
 margin: 20px auto 5px;
