@@ -53,15 +53,19 @@ grid-template-columns: repeat(1, 1fr);`)
 
 const intake0 = document.createElement("input")
 place.appendChild(intake0)
+
 intake0.setAttribute("placeholder", "Country")
 const intake = document.createElement("input")
 place.appendChild(intake)
+
 intake.setAttribute("placeholder", "Street Address")
 const intake1 = document.createElement("input")
 place.appendChild(intake1)
+
 intake1.setAttribute("placeholder", "City")
 const intake2 = document.createElement("input")
 place.appendChild(intake2)
+
 intake2.setAttribute("placeholder", "Province")
 
 const bth = document.createElement("div")
