@@ -40,6 +40,30 @@ const ph = document.createElement("input")
 ph.setAttribute("placeholder", "Phone Number")
 contact.appendChild(ph)
 
+const place = document.createElement("div")
+form.appendChild(place)
+const address = document.createElement("a")
+address.textContent="Address"
+place.appendChild(address)
+place.setAttribute("style", `
+display: grid; 
+margin: 0 23px;
+grid-template-rows: repeat(5, 1fr);
+grid-template-columns: repeat(1, 1fr);`)
+
+const intake0 = document.createElement("input")
+place.appendChild(intake0)
+intake0.setAttribute("placeholder", "Country")
+const intake = document.createElement("input")
+place.appendChild(intake)
+intake.setAttribute("placeholder", "Street Address")
+const intake1 = document.createElement("input")
+place.appendChild(intake1)
+intake1.setAttribute("placeholder", "City")
+const intake2 = document.createElement("input")
+place.appendChild(intake2)
+intake2.setAttribute("placeholder", "Province")
+
 const bth = document.createElement("div")
 form.appendChild(bth)
 
@@ -106,7 +130,7 @@ for(let j = 1; j<=31; j++){
     const option1 = document.createElement("option")
     option1.textContent = `${j}`
     select1.appendChild(option1)
-}
+}    
 
 const select2= document.createElement("select")
 bth.appendChild(select2)
@@ -115,31 +139,7 @@ for(let j = 2023; j>=1990; j--){
     const option2 = document.createElement("option")
     option2.textContent = `${j}`
     select2.appendChild(option2)
-}
-
-const place = document.createElement("div")
-form.appendChild(place)
-const address = document.createElement("a")
-address.textContent="Address"
-place.appendChild(address)
-place.setAttribute("style", `
-display: grid; 
-margin: 0 23px;
-grid-template-rows: repeat(5, 1fr);
-grid-template-columns: repeat(1, 1fr);`)
-
-const intake0 = document.createElement("input")
-place.appendChild(intake0)
-intake0.setAttribute("placeholder", "Country")
-const intake = document.createElement("input")
-place.appendChild(intake)
-intake.setAttribute("placeholder", "Street Address")
-const intake1 = document.createElement("input")
-place.appendChild(intake1)
-intake1.setAttribute("placeholder", "City")
-const intake2 = document.createElement("input")
-place.appendChild(intake2)
-intake2.setAttribute("placeholder", "Province")
+}    
 
 
 
