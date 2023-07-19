@@ -18,14 +18,13 @@ div.appendChild(text1)
 
 const input = document.createElement("input")
 div.appendChild(input)
-input.setAttribute("placeholder", "First Name")
-// var x = document.getElementsByTagName("input").required;
-// input.setAttribute("x")
-
+input.setAttribute("placeholder", "First Name");
+input.setAttribute('required', '')
 
 const input1 = document.createElement("input")
 div.appendChild(input1)
 input1.setAttribute("placeholder", "Last Name")
+input1.setAttribute('required', '')
 
 const contact = document.createElement("div")
 form.appendChild(contact)
@@ -198,7 +197,10 @@ btn.textContent="SUBMIT"
 form.appendChild(btn)
 
 btn.addEventListener("click", function() {
-    alert("Thank you for your cooperation ")
+    setTimeout(() => {
+        alert("Thank you for your cooperation ") 
+    }, 2000);
+  
 });
 btn.addEventListener("mouseenter", function(){
 btn.style.backgroundColor = "orangered"
