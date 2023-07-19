@@ -117,6 +117,32 @@ for(let j = 2023; j>=1990; j--){
     select2.appendChild(option2)
 }
 
+const place = document.createElement("div")
+form.appendChild(place)
+const address = document.createElement("a")
+address.textContent="Address"
+place.appendChild(address)
+place.setAttribute("style", `
+display: grid; 
+margin: 0 23px;
+grid-template-rows: repeat(5, 1fr);
+grid-template-columns: repeat(1, 1fr);`)
+
+const intake0 = document.createElement("input")
+place.appendChild(intake0)
+intake0.setAttribute("placeholder", "Country")
+const intake = document.createElement("input")
+place.appendChild(intake)
+intake.setAttribute("placeholder", "Street Address")
+const intake1 = document.createElement("input")
+place.appendChild(intake1)
+intake1.setAttribute("placeholder", "City")
+const intake2 = document.createElement("input")
+place.appendChild(intake2)
+intake2.setAttribute("placeholder", "Province")
+
+
+
 const gender = document.createElement("div")
 form.appendChild(gender)
 const gen = document.createElement("a")
@@ -179,8 +205,53 @@ btn.addEventListener("mouseout", function(){
     btn.style.color = "black"
 });
 
+
+
+
 // css-styling
 
+address.style.cssText=`
+margin: 20px 5px 0;
+display:inline-block;
+font-weight: bolder;
+font-size: 10px;
+`
+intake0.style.cssText=`
+padding: 5px;
+padding-left: 13px;
+margin:5px;
+border: 2px solid lightgrey;
+border-radius: 5px;
+grid-row: 2/3;
+grid-column: 1/3;
+`
+intake.style.cssText=`
+padding: 5px;
+padding-left: 13px;
+margin:5px;
+border: 2px solid lightgrey;
+border-radius: 5px;
+grid-row: 3/4;
+grid-column: 1/3;
+`
+intake1.style.cssText=`
+padding: 5px;
+padding-left: 13px;
+margin:5px;
+border: 2px solid lightgrey;
+border-radius: 5px;
+grid-row: 4/5;
+grid-column: 1/3;
+`
+intake2.style.cssText=`
+padding: 5px;
+padding-left: 13px;
+margin:5px;
+border: 2px solid lightgrey;
+border-radius: 5px;
+grid-row: 5/6;
+grid-column: 1/3;
+`
 text1.style.cssText=`
 margin: 20px 25px 0;
 display:inline-block;
@@ -246,6 +317,7 @@ background:  rgba(179, 179, 179, 0.350);
 display:flex;
 justify-content: center;
 align-items: center;
+accent-color: orangered;
 `
 h1.style.cssText=`
 text-align:center;
@@ -258,7 +330,7 @@ color: orangered;
 border-radius: 5px 5px 0 0;
 `
 form.style.cssText=`
-margin: 10vh 25vw;
+margin: 5vh 25vw;
 background: white;
 padding: 0 0 30px;
 width: 450px;
